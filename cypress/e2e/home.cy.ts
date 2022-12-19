@@ -12,7 +12,7 @@ describe("Home page", () => {
   it("Check if h1 contains the correct text", () => {
     // Here, I use the data-test attribute to select the matching element
     // I also use the .contains method ( a query) to get the element that contains the text
-    cy.get("[data-test='hero-heading']").contains("Testing Next.js Applications with Cypress")
+    cy.getByData('hero-heading').contains("Testing Next.js Applications with Cypress")
   })
 
   // Test that the features on the homepage are correct
@@ -24,3 +24,4 @@ describe("Home page", () => {
     cy.get("dt").eq(2).contains("Free and Open Source")
   })
 })
+export {}
